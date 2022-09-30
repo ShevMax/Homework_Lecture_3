@@ -1,10 +1,11 @@
-package PageObject.PageElementFunctions;
+package PageObject.PageFunctions;
 
 
+import com.codeborne.selenide.Condition;
 import io.qameta.allure.Step;
+import org.junit.jupiter.api.Assertions;
 import java.time.Duration;
 
-import static PageObject.PageElement.TestProjectPage.projectsButton;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 import static utils.Configuration.getConfigurationValue;
@@ -22,6 +23,9 @@ public class LoginPageFunction {
     public static void authorization(String login) {
         loginField.shouldBe(visible).sendKeys(getConfigurationValue("login"));
         passwordField.sendKeys(getConfigurationValue("password"));
-        passwordField.pressEnter();
+        inputButton.shouldBe(Condition.enabled).click();
+        //String elementValue = forAssert.shouldBe(visible,Duration.ofSeconds(60) ).getText();
+        //Assertions.assertEquals(elementValue, "System Dashboard", "Ошибка ввода");
+
     }
 }

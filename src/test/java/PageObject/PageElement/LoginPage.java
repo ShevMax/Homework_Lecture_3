@@ -13,4 +13,7 @@ public class LoginPage {
 
 // определение локатора кнопки входа в аккаунт
     public static SelenideElement inputButton = $x("//input[@class='aui-button aui-button-primary']");
+
+//  проверка на ошибку авторизации
+    public static SelenideElement forAssert = $x ("//h1");
 }

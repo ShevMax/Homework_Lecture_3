@@ -9,6 +9,9 @@ public class NewBugCase {
 // кнопка отрытия нового тест-кейса
     public static SelenideElement newCaseButton = $x("//a[@id='create_link']");
 
+// заголовок окна Создание задачи
+    public static SelenideElement createTaskPage=$x("//h2[text()='Создание задачи']");
+
 // кнопка Настроить поля в Создании задачи
     public static SelenideElement configureFieldsButton = $x("//span[@class='aui-icon aui-icon-small aui-iconfont-configure']");
 
@@ -19,17 +22,31 @@ public class NewBugCase {
     public static SelenideElement clickUserFieldsButton = $x("//option[@class='qf-configurable']");
 
 // поле Тип задачи в окне Создание задачи
-    public static SelenideElement fieldTypeTask  = $x("//div[@class='aui-ss issuetype-ss aui-ss-select aui-ss-has-entity-icon']");
-
-// Тип задачи Ошибка в поле Тип задачи окна Создание задачи
     public static SelenideElement clickFieldTypeTask = $x("//input[@id='issuetype-field']");
-
 
 // поле Тема в окне Создание задачи
     public static SelenideElement fieldTopic = $x("//input[@class='text long-field']");
 
+// поле Описание в окне Создание задачи
+    public static SelenideElement descriptionTask = $x("//div[@id='description-wiki-edit']//iframe");
+
+// ввод данных в поле Описание в окне Создание задачи
+    public static SelenideElement descriptionFieldTask = $x("//p");
+
 // поле выбора Приоритета в окне Создание задачи
     public static SelenideElement fieldPrioritySelection = $x("//div[@id='priority-single-select']");
+
+// поле Затронутые версии в окне Создание задачи
+    public static SelenideElement affectedVersionsField = $x("//div[@id='environment-wiki-edit']//iframe");
+
+// выбор версии 2 в поле Исправить версии в окне Создание задачи
+    public static SelenideElement fixVersion = $x("(//option[@value='10001'])[1]");
+
+// выбор версии в поле Затронутые версии в окне Создание задачи
+    public static SelenideElement choosingVersion = $x("(//option[@value='10001'])[2]");
+
+// Назначить меня Исполнителем тест-кейса
+    public static SelenideElement changePerformerButton = $x("//button[contains(text(), 'Назначить меня')]");
 
 // кнопка Создать в окне Создания задачи
     public static SelenideElement clickCreateButton = $x("//input[@id='create-issue-submit']");
@@ -37,26 +54,24 @@ public class NewBugCase {
 // кнопка Отменить в окне Создание задачи
     public static SelenideElement clickCancelButton = $x("//button[@class='aui-button aui-button-link cancel']");
 
-// кнопка Назначить меня в качестве Исполнителя по вновь заведенному тест-кейсу
-    public static SelenideElement changePerformerButton = $x("//a[@id='assign-to-me']");
-
 // кнопка изменения статуса вновь заведенного тест-кейса
     public static SelenideElement changeStatusButton = $x("//span[@class='trigger-label' and text()='В работе']");
 
 // кнопка Бизнесс-процесс в окне вновь заведенного тест-кейса
     public static SelenideElement businessProcessButton = $x("//a[@id='opsbar-transitions_more']");
 
-// кнопка Исполнено в окне Бизнес-процесс
-    public static SelenideElement executedProcessButton = $x("//span[@class='trigger-label' and text()='Исполнено']");
-
 // кнопка Выполнено в окне Бизнес-процесс
     public static SelenideElement executedProcessButton2 = $x("//span[@class='trigger-label' and text()='Выполнено']");
 
-// поле Метки в окне Исполнено
-    public static SelenideElement tagsField = $x("//span[@class='icon noloading drop-menu']");
+// строка Мои открытые задачи в поле Переключить фильтр
+    public static SelenideElement myOpenTask = $x ("//a[@data-item-id='myopenissues']");
 
-// поле Задача в окне Исполнено
-    public static SelenideElement taskField = $x("//span[@class='icon drop-menu noloading']");
+// открытие тест-кейса с названием Test-case for solving a bug
+    public static SelenideElement openMyTestCase = $x("//li[@title='Test-case for solving a bug']");
+
+// статус тест-кейса с названием Test-case for solving a bug
+    public static SelenideElement statusValue = $x("//span[contains(@class,'jira-issue-status-lozenge')]");
+
 
 
 
