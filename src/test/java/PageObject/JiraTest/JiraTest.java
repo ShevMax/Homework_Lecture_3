@@ -68,6 +68,7 @@ public class JiraTest extends WebHooks {
         searchTaskMethod(getConfigurationValue("task"));
         NewBugCaseMethod(getConfigurationValue("topic"));
         searchNewTestCase(getConfigurationValue("topic"));
+        searchNewTestCase(getConfigurationValue("topic"));
     }
     @Rule
     public ScreenShooter makeScreenshotOnFailure = ScreenShooter.failedTests().succeededTests();

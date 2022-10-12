@@ -67,7 +67,7 @@ public class NewBugCase {
     public static SelenideElement myOpenTask = $x ("//a[@data-item-id='myopenissues']");
 
 // открытие тест-кейса с названием Test-case for solving a bug
-    public static SelenideElement openMyTestCase = $x("//li[@title='Test-case for solving a bug']");
+    public static SelenideElement openMyTestCase = $x("//li[contains(@title,'test-case for solving a bug') and @class='focused']");
 
 // статус тест-кейса с названием Test-case for solving a bug
     public static SelenideElement statusValue = $x("//span[contains(@class,'jira-issue-status-lozenge')]");
